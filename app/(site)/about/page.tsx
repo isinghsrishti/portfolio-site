@@ -18,7 +18,7 @@ export default async function About() {
                   I&apos;m {data.fullName}. I live in {data.location}, where I
                   design the future.
                 </h1>
-
+--
                 <div className="flex flex-col gap-y-3 text-zinc-400 leading-relaxed">
                   <PortableText value={data.fullBio} />
                 </div>

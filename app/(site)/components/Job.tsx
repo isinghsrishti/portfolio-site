@@ -33,7 +33,10 @@ export default async function Job() {
               <h3 className="text-xl font-bold">{data.name}</h3>
               <p>{data.jobTitle}</p>
               <small className="text-sm text-zinc-500 mt-2 tracking-widest uppercase">
-                {data.startDate.toString()} - {data.endDate.toString()}
+                {/* write Present if end date is null */}
+                {data.endDate === null
+                  ? `${data.startDate} - Present`
+                  : `${data.startDate} - ${data.endDate}`}
               </small>
               <p className="text-base text-zinc-400 my-4">{data.description}</p>
             </div>

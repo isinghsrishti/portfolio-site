@@ -1,8 +1,9 @@
-import { createClient, type ClientConfig } from "@sanity/client";
+import { createClient, ClientConfig } from "@sanity/client";
+import { getAllJSDocTagsOfKind } from "typescript";
 
 const config: ClientConfig = {
-  projectId: "ga8lllhf",
-  dataset: "production",
+  projectId: process.env.SANITY_API_PROJECT_ID,
+  dataset: process.env.SANITY_API_DATASET,
   apiVersion: "2023-07-16",
   useCdn: false,
 };
