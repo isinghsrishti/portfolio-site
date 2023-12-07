@@ -3,11 +3,11 @@ import { deskTool } from "sanity/desk";
 import { schemaTypes } from "./schemas";
 
 export default defineConfig({
-  name: "sanity-nextjs-site",
-  title: "Sanity Next.js Site",
-  projectId: "ga8lllhf",
-  dataset: "production",
-  basePath: "/studio",
+  name: process.env.SANITY_NAME || "sanity-nextjs-site",
+  title: process.env.SANITY_TITLE || "Sanity Next.js Site",
+  projectId: process.env.SANITY_PROJECT_ID || "ga8lllhf",
+  dataset: process.env.SANITY_DATASET || "production",
+  basePath: process.env.SANITY_BASE_PATH || "/studio",
   plugins: [deskTool()],
   schema: { types: schemaTypes },
 });
