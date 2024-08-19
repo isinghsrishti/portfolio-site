@@ -14,10 +14,10 @@ export default async function About() {
           <div key={data._id}>
             <section className="grid lg:grid-cols-2 grid-cols-1 gap-x-6 justify-items-center">
               <div className="order-2 lg:order-none">
-                <h1 className="lg:text-5xl text-4xl lg:leading-tight basis-1/2 font-bold mb-8">
-                  I&apos;m {data.fullName}. I live in {data.location}, where I
-                  design the future.
-                </h1>
+                <h2 className="lg:text-5xl text-4xl lg:leading-tight basis-1/2 font-bold mb-8">
+                Building and innovating with tech.
+                  {/* I&apos;m {data.fullName}. I am from {data.location}, building and innovating tech. */}
+                </h2>
 --
                 <div className="flex flex-col gap-y-3 text-zinc-400 leading-relaxed">
                   <PortableText value={data.fullBio} />
@@ -60,8 +60,7 @@ export default async function About() {
             <section className="mt-24 max-w-2xl">
               <h2 className="font-semibold text-4xl mb-4">Expertise</h2>
               <p className="text-zinc-400 max-w-lg">
-                I&apos;ve spent few years working on my skills. In no particular
-                order, here are a few of them.
+                I&apos;ve spent almost a decade working with computers, building professional softwares and cool personal projects. Here are some of my key skills.
               </p>
 
               <ul className="flex flex-wrap items-center gap-3 mt-8">
